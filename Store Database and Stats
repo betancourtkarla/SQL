@@ -1,0 +1,31 @@
+Create a store database 
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+
+INSERT INTO store VALUES (1, "Nike socks", "Accesories", "16", 10);
+INSERT INTO store Values (2, "Addidas socks", "Accesories", "16", 8);
+INSERT INTO store VALUES (3, "Newbalance socks", "Accesories", "16", 10); 
+INSERT INTO store VALUES (4, "NIKE shirt", "Tops", "25.00", 9);
+INSERT INTO store VALUES (5, "Addidas shirt", "TOPS", "27", 8);
+INSERT INTO store VALUES (6, "Newbalance shirt", "Tops", "25.00", 10);
+INSERT INTO store Values (7, "NIKE Joggers", "Bottoms", "45.00", 10);
+INSERT INTO store VALUES (8, "Addidas Joggers", "Bottoms", "35.00", 8);
+INSERT INTO store Values (9, "Newbalance Joggers", "Bottoms", "45.00", 10);
+INSERT INTO store Values (10, "NIKE hoodie", "Tops", "50.00",10);
+INSERT INTO store Values (11, "Addidas hoodie", "Tops", "45.00", 7);
+INSERT INTO store Values (12, "Newbalance hoodie", "Tops", "55.00", 10);
+INSERT INTO store Values (13, "NIKE hat", "Accesories", "25.00",10);
+INSERT INTO store Values (14, "Addidas hat", "Accesories", "20.00",8);
+INSERT INTO store Values (15, "Newbalance hat", "Accesories", "30.00", 10);
+
+SELECT * FROM store 
+ORDER BY price desc;
+
+SELECT AVG(price) "avg Accesories item price" 
+FROM store 
+WHERE section="Accesories";
+
+SELECT Item, price, popularity
+FROM store
+ORDER by popularity desc 
+limit 5;
