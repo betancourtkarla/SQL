@@ -18,13 +18,16 @@ INSERT INTO store Values (13, "NIKE hat", "Accesories", "25.00",10);
 INSERT INTO store Values (14, "Addidas hat", "Accesories", "20.00",8);
 INSERT INTO store Values (15, "Newbalance hat", "Accesories", "30.00", 10);
 
+--Display the database ordered by price. 
 SELECT * FROM store 
 ORDER BY price desc;
 
+--What is the avg price of items in the Accesories section?
 SELECT AVG(price) "avg Accesories item price" 
 FROM store 
 WHERE section="Accesories";
 
+--What are the most 5 popular items?
 SELECT Item, price, popularity
 FROM store
 ORDER by popularity desc 
